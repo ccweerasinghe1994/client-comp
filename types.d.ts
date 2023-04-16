@@ -1,5 +1,16 @@
-/// <reference types="next" />
-/// <reference types="next/image-types/global" />
+type IResult = {
+	pageid: number;
+	title: string;
+	extract: string;
+	thumbnail?: {
+		source: string;
+		width: number;
+		height: number;
+	};
+};
 
-// NOTE: This file should not be edited
-// see https://nextjs.org/docs/basic-features/typescript for more information.
+type ISearchResults = {
+	query?: {
+		pages?: IResult[];
+	};
+};
